@@ -14,7 +14,6 @@ public class UserController {
     @RequestMapping(value = "user/{id}")
     public User getUser(@PathVariable Long id) {
         User user = new User();
-        user.setId(id);
         user.setFirstName("Martin");
         user.setLastName("Gutierrez");
         user.setPhone("3127773294");
@@ -29,7 +28,6 @@ public class UserController {
         List<User> userList = new ArrayList<>();
 
         User user = new User();
-        user.setId(1L);
         user.setFirstName("Martin");
         user.setLastName("Gutierrez");
         user.setPhone("3127773294");
@@ -37,7 +35,6 @@ public class UserController {
         user.setPassword("1234");
 
         User user2 = new User();
-        user2.setId(2L);
         user2.setFirstName("Martin");
         user2.setLastName("Gutierrez");
         user2.setPhone("3127773294");
@@ -45,7 +42,6 @@ public class UserController {
         user2.setPassword("1234");
 
         User user3 = new User();
-        user3.setId(3L);
         user3.setFirstName("Martin");
         user3.setLastName("Gutierrez");
         user3.setPhone("3127773294");

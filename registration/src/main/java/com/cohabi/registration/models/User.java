@@ -1,7 +1,13 @@
 package com.cohabi.registration.models;
 
-public class User {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @SequenceGenerator(name = "user_sequence", sequenceName = "user_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_sequence")
     private Long id;
     private String firstName;
     private String lastName;
@@ -9,12 +15,11 @@ public class User {
     private String phone;
     private String password;
 
-    public Long getId() {
-        return id;
+    public User(){
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getId() {
+        return id;
     }
 
     public String getFirstName() {
